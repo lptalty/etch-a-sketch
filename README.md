@@ -1,0 +1,1 @@
+This is a project to create an etch-a-sketch clone. I will create a grid that the user can manipulate using their mouse. In order to create the grid, I will use only JS. This project will help me practice DOM manipulation in combination with the relationship between HTML, CSS, and JS. 
