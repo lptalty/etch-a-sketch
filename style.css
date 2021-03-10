@@ -16,7 +16,6 @@
 then the grid will always display how I want it to, being the perfect square that it is */
 #container{
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
     background-color: teal;
     position: absolute;
     top: 50%;
