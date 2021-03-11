@@ -1,8 +1,24 @@
 const body = document.body
 const container = document.createElement("div")
 container.setAttribute("id", "container")
+const header = document.createElement("div")
+header.setAttribute("id", "header")
+header.innerText = 'Etch-a-Sketch'
+body.append(header)
 
-const userInput = prompt('What size grid do you want?')
+const buttonContainer = document.createElement("div")
+buttonContainer.setAttribute("id", "buttonContainer")
+buttonContainer.innerText = 'working'
+body.append(buttonContainer)
+//make the four buttons that will fit inside buttonContainer
+//then each button has to have its own div or is it span? That will determine the action of the program
+
+
+
+
+//having these commented out for until the the header and buttons are made
+//need to make a black color button, random color button, erase button, restart button
+//const userInput = prompt('What size grid do you want?')
 
 function gridSize(num){
 
@@ -38,7 +54,8 @@ for(x = 0; x < num; x++){
 
 }
 
-gridSize(userInput)
+//gridSize(userInput)
+gridSize(4)
 
 
 

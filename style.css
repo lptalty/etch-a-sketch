@@ -27,3 +27,27 @@ then the grid will always display how I want it to, being the perfect square tha
     border-style: groove;
     border-color: violet;
 }
+
+#header{
+    background-color: thistle;
+    position:absolute;
+    top: 10%;
+    left:50%;
+    width: 250px;
+    height:45px;
+    transform: translate(-50%, -50%);
+    font-family:cursive;
+    display: inline-block;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#buttonContainer{
+    background-color: tomato;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 17.5%;
+    left:50%;
+    width: 400px;
+    height: 25px;
+}
