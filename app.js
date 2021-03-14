@@ -7,13 +7,48 @@ header.innerText = 'Etch-a-Sketch'
 body.append(header)
 
 const buttonContainer = document.createElement("div")
-buttonContainer.setAttribute("id", "buttonContainer")
-buttonContainer.innerText = 'working'
+buttonContainer.setAttribute("class", "buttonContainer")
 body.append(buttonContainer)
 //make the four buttons that will fit inside buttonContainer
 //then each button has to have its own div or is it span? That will determine the action of the program
 
+const blackBtn = document.createElement("button")
+blackBtn.setAttribute("id", "blackBtn")
+blackBtn.innerText = 'Black'
+buttonContainer.append(blackBtn)
 
+const colorBtn = document.createElement("button")
+colorBtn.setAttribute("id", "colorBtn")
+colorBtn.innerText = 'Color'
+buttonContainer.append(colorBtn)
+
+const eraseBtn = document.createElement("button")
+eraseBtn.setAttribute("id", "eraseBtn")
+eraseBtn.innerText = 'Erase'
+buttonContainer.append(eraseBtn)
+
+const resetBtn = document.createElement("button")
+resetBtn.setAttribute("id", "resetBtn")
+resetBtn.innerText = 'Reset'
+buttonContainer.append(resetBtn)
+
+// const colorBtn = document.createElement("button")
+// blackBtn.setAttribute("id", "colorBtn")
+
+// const eraseBtn = document.createElement("button")
+// blackBtn.setAttribute("id", "eraseBtn")
+
+// const resetBtn = document.createElement("button")
+// blackBtn.setAttribute("id", "resetBtn")
+
+
+// buttonContainer.append(blackBtn)
+// buttonContainer.append(colorBtn)
+// buttonContainer.append(eraseBtn)
+// buttonContainer.append(resetBtn)
+
+//i think that this doesn't work because there is no btn black id within my html 
+//const blackBtn = buttonContainer.querySelector('#btn-black')
 
 
 //having these commented out for until the the header and buttons are made
@@ -55,7 +90,7 @@ for(x = 0; x < num; x++){
 }
 
 //gridSize(userInput)
-gridSize(4)
+gridSize(5)
 
 
 

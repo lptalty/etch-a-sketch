@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #boxDiv{
     background-color: tan;
     /* height: 20px;
@@ -42,7 +47,7 @@ then the grid will always display how I want it to, being the perfect square tha
     font-size: xx-large;
 }
 
-#buttonContainer{
+.buttonContainer{
     background-color: tomato;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -50,4 +55,40 @@ then the grid will always display how I want it to, being the perfect square tha
     left:50%;
     width: 400px;
     height: 25px;
+    display:inline-block;
+    text-align: center;
+    /* padding-top: 10px; */
+}
+
+#blackBtn{
+    background-color: whitesmoke;
+    width: 75px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#colorBtn{
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    background-color: whitesmoke;
+    margin-right: 20px;
+    
+}
+#eraseBtn{
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    background-color: whitesmoke;
+    margin-right: 20px;
+    
+}
+
+#resetBtn{
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    background-color: whitesmoke;
+    
 }
