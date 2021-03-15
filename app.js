@@ -32,7 +32,7 @@ resetBtn.setAttribute("id", "resetBtn")
 resetBtn.innerText = 'Reset'
 buttonContainer.append(resetBtn)
 
-//const userInput = prompt('What size grid do you want?')
+const userInput = prompt('What size grid do you want?')
 
 function gridSize(num){
 
@@ -65,32 +65,41 @@ for(x = 0; x < num; x++){
 
 }
 
-//gridSize(userInput)
-gridSize(25)
-
+gridSize(userInput)
+//gridSize(25)
+let currentColor = undefined;
+const randomColor = ['#c1faff', '#b2eaff', '#a2c9ff', '#d2afff', '#d496ff'];
 const myDivs = container.getElementsByClassName("boxDiv")
-console.log(myDivs)
+const blackClick = buttonContainer.querySelector("#blackBtn")
+const colorClick = buttonContainer.querySelector("#colorBtn")
+const eraseClick = buttonContainer.querySelector("#eraseBtn")
+const resetClick = buttonContainer.querySelector("#resetBtn")
+
+blackClick.addEventListener('click', function(){
+    console.log('working')
+    currentColor = ["black"]
+})
+
+colorClick.addEventListener('click', function(){
+    console.log('working')
+    //currentColor = randomColor[Math.floor(Math.random() * randomColor.length)]
+    currentColor = randomColor;
+})
+
+eraseClick.addEventListener('click', function(){
+    console.log('working')
+    currentColor = ["white"]
+})
+
+resetClick.addEventListener('click', function(){
+    location.reload();
+})
+
 
 for(let div of myDivs){
     div.addEventListener('mouseover', function(){
-        console.log('working')
-        div.style.backgroundColor = "black"
+        div.style.backgroundColor = currentColor[Math.floor(Math.random() * currentColor.length)];
     })
 }
 
 
-// document.querySelector(".container").addEventListener("click", function(){
-//     console.log("working")
-//     document.querySelector(".boxDiv").style.backgroundColor = "black"
-//         //document.querySelector("#boxDiv").style.backgroundColor = "black"
-// })
-const blackColor = ["#000000"]
-// document.getElementById("boxDiv").addEventListener("mouseover", function(){
-//     document.getElementById("boxDiv").style.background = blackColor;
-// })
-
-// const changeDiv = document.getElementById("container")
-
-// changeDiv.addEventListener("click", function(){
-//     console.log('working')
-// })
