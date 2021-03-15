@@ -1,6 +1,6 @@
 const body = document.body
 const container = document.createElement("div")
-container.setAttribute("id", "container")
+container.setAttribute("class", "container")
 const header = document.createElement("div")
 header.setAttribute("id", "header")
 header.innerText = 'Etch-a-Sketch'
@@ -32,27 +32,6 @@ resetBtn.setAttribute("id", "resetBtn")
 resetBtn.innerText = 'Reset'
 buttonContainer.append(resetBtn)
 
-// const colorBtn = document.createElement("button")
-// blackBtn.setAttribute("id", "colorBtn")
-
-// const eraseBtn = document.createElement("button")
-// blackBtn.setAttribute("id", "eraseBtn")
-
-// const resetBtn = document.createElement("button")
-// blackBtn.setAttribute("id", "resetBtn")
-
-
-// buttonContainer.append(blackBtn)
-// buttonContainer.append(colorBtn)
-// buttonContainer.append(eraseBtn)
-// buttonContainer.append(resetBtn)
-
-//i think that this doesn't work because there is no btn black id within my html 
-//const blackBtn = buttonContainer.querySelector('#btn-black')
-
-
-//having these commented out for until the the header and buttons are made
-//need to make a black color button, random color button, erase button, restart button
 //const userInput = prompt('What size grid do you want?')
 
 function gridSize(num){
@@ -63,15 +42,14 @@ if(num >= 2 && num <=64){
 for(x = 0; x < num; x++){
     for(let y = 0; y < num; y++){
         const boxDiv = document.createElement("div")
-        boxDiv.setAttribute("id", "boxDiv")
+        boxDiv.setAttribute("class", "boxDiv")
         container.append(boxDiv)
     }
     }   
 //add container id to body so that it can be manipulated using the DOM
 //style the container grid, ensuring the number of rows and columns is equal to the argument value
     body.append(container)
-    document.querySelector("#container").style.gridTemplateColumns = `repeat(${num}, 1fr)`
-
+    document.querySelector(".container").style.gridTemplateColumns = `repeat(${num}, 1fr)`
 
 //else reprompt the user for a new number that is inbetween the correct range
 } else {
@@ -85,12 +63,34 @@ for(x = 0; x < num; x++){
 
 
 
-
-
 }
 
 //gridSize(userInput)
-gridSize(5)
+gridSize(25)
+
+const myDivs = container.getElementsByClassName("boxDiv")
+console.log(myDivs)
+
+for(let div of myDivs){
+    div.addEventListener('mouseover', function(){
+        console.log('working')
+        div.style.backgroundColor = "black"
+    })
+}
 
 
+// document.querySelector(".container").addEventListener("click", function(){
+//     console.log("working")
+//     document.querySelector(".boxDiv").style.backgroundColor = "black"
+//         //document.querySelector("#boxDiv").style.backgroundColor = "black"
+// })
+const blackColor = ["#000000"]
+// document.getElementById("boxDiv").addEventListener("mouseover", function(){
+//     document.getElementById("boxDiv").style.background = blackColor;
+// })
 
+// const changeDiv = document.getElementById("container")
+
+// changeDiv.addEventListener("click", function(){
+//     console.log('working')
+// })

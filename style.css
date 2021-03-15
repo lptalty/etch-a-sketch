@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-#boxDiv{
+.boxDiv{
     background-color: tan;
     /* height: 20px;
     width: 20px; */
@@ -17,9 +17,12 @@
     
 }
 
+/* #boxDiv:hover{
+    background-color: black;
+} */
 /* if i can have the grid tempalte column be equivalent to whatever is put into the for loop, 
 then the grid will always display how I want it to, being the perfect square that it is */
-#container{
+.container{
     display: grid;
     background-color: teal;
     position: absolute;
