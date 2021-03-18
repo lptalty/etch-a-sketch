@@ -34,7 +34,7 @@ then the grid will always display how I want it to, being the perfect square tha
     width: 400px;
     height: 400px;
     border-style: groove;
-    border-color: violet;
+    border-color:darkorchid;
 }
 
 #header{
@@ -49,10 +49,11 @@ then the grid will always display how I want it to, being the perfect square tha
     display: inline-block;
     text-align: center;
     font-size: xx-large;
+    border-radius: 2px;
 }
 
 .buttonContainer{
-    background-color: tomato;
+    
     position: absolute;
     transform: translate(-50%, -50%);
     top: 17.5%;
